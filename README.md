@@ -19,7 +19,7 @@ Sou estudante de ADS, apaixonada por tecnologia e em busca da minha primeira opo
 Aqui você encontrará os projetos desenvolvidos durante a minha jornada acadêmica e estudos autônomos:
 
 * **[Projeto Vincent Van Gogh](./Aula%2004):** Página web responsiva.
-* **[Projeto Simples de Perfil](./Meusprojetos):** Página responsiva simpes de perfil.
+* **[Projeto Simples de Perfil](./Meus%20projetos):** Página responsiva simpes de perfil.
 
 ---
 
