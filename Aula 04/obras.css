@@ -1,0 +1,209 @@
+/* ===========================
+   RESET E BASE
+=========================== */
+* {
+    box-sizing: border-box; /* faz o padding e border serem incluídos no tamanho total do elemento */
+    margin: 0;              /* remove margens padrão do navegador */
+    padding: 0;             /* remove espaçamentos internos padrão do navegador */
+}
+
+body {
+    font-family: Georgia, serif; /* define a fonte principal da página */
+    background-color: #f5f0eb;   /* cor de fundo bege claro da página */
+    color: #2c2c2c;              /* cor padrão do texto (cinza escuro) */
+    line-height: 1.7;            /* espaçamento entre linhas do texto */
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+    background-color: #2c4a47; /* cor de fundo verde escuro do cabeçalho */
+    padding: 5px;              /* espaçamento interno do cabeçalho */
+    text-align: center;        /* centraliza o texto horizontalmente */
+}
+
+header h1 {
+    color: white;          /* cor do título em branco */
+    font-size: 2rem;       /* tamanho da fonte do título */
+    letter-spacing: 2px;   /* espaçamento entre as letras do título */
+}
+
+/* ===========================
+   NAVEGAÇÃO
+=========================== */
+nav.menu {
+    background-color: #3d5452; /* cor de fundo do menu de navegação */
+    display: flex;             /* organiza os filhos em linha (flexbox) */
+    justify-content: center;   /* centraliza os itens horizontalmente */
+    gap: 30px;                 /* espaço entre os itens do menu */
+    padding: 12px 0;           /* espaçamento interno vertical */
+    list-style: none;          /* remove os marcadores de lista */
+}
+
+nav.menu ul {
+    display: flex;      /* organiza os itens da lista em linha */
+    gap: 30px;          /* espaço entre os itens */
+    list-style: none;   /* remove os marcadores de lista */
+    padding: 0;         /* remove o espaçamento interno padrão */
+    margin: 0;          /* remove a margem padrão */
+}
+
+nav.menu ul li a {
+    color: #e8ddd0;             /* cor dos links do menu */
+    text-decoration: none;      /* remove o sublinhado dos links */
+    font-size: 1rem;            /* tamanho da fonte dos links */
+    letter-spacing: 1px;        /* espaçamento entre letras */
+    text-transform: uppercase;  /* transforma o texto em maiúsculas */
+    transition: color 0.2s;     /* animação suave ao passar o mouse */
+}
+
+nav.menu ul li a:hover {
+    color: white; /* muda a cor do link para branco ao passar o mouse */
+}
+
+/* ===========================
+   WRAPPER (layout principal)
+=========================== */
+div.wrapper {
+    display: grid;                          /* ativa o CSS Grid para organizar o layout */
+    grid-template-columns: 280px 1fr;       /* cria 2 colunas: aside fixo de 280px + conteúdo ocupa o resto */
+    grid-template-rows: auto auto;          /* 2 linhas com altura automática */
+    gap: 20px;                              /* espaço entre as colunas e linhas do grid */
+    max-width: 1100px;                      /* largura máxima do conteúdo */
+    margin: 30px auto;                      /* centraliza o wrapper na página com margem vertical */
+    padding: 0 20px;                        /* espaçamento interno nas laterais */
+}
+
+.card {
+    display: flex;      /* organiza os cards de imagem em linha */
+    flex-wrap: wrap;    /* quebra para a próxima linha se não couber */
+    gap: 20px;          /* espaço entre os cards */
+}
+
+.img {
+    display: flex;              /* ativa o flexbox no card de imagem */
+    flex-direction: column;     /* empilha imagem e texto verticalmente */
+    align-items: center;        /* centraliza o conteúdo horizontalmente */
+    width: 180px;               /* largura fixa de cada card */
+}
+
+.img img {
+    width: 180px;           /* largura da imagem igual ao card */
+    height: 150px;          /* altura fixa para todas as imagens */
+    object-fit: cover;      /* recorta a imagem para preencher sem distorcer */
+    border-radius: 8px;     /* bordas arredondadas na imagem */
+}
+
+.img h2 {
+    font-size: 14px;    /* tamanho do título da obra */
+    text-align: center; /* centraliza o título */
+    margin-top: 8px;    /* espaço entre a imagem e o título */
+}
+
+.img p {
+    font-size: 12px;    /* tamanho do texto do museu */
+    text-align: center; /* centraliza o texto */
+    color: gray;        /* cor cinza para o texto secundário */
+}
+
+/* ===========================
+   ASIDE (imagem e infos)
+=========================== */
+.imagem_van_gogh {
+    grid-column: 1;         /* posiciona o aside na primeira coluna do grid */
+    grid-row: 1 / 3;        /* ocupa da linha 1 até a 3 (as duas linhas do grid) */
+    background-color: #e8ddd0; /* cor de fundo bege do aside */
+    border-radius: 4px;     /* bordas levemente arredondadas */
+    padding: 15px;          /* espaçamento interno */
+    text-align: center;     /* centraliza o conteúdo */
+    align-self: start;      /* alinha o aside no topo da célula do grid */
+    position: sticky;       /* faz o aside "grudar" ao rolar a página */
+    top: 20px;              /* distância do topo ao grudar */
+    border: 1px solid #ccc; /* borda cinza ao redor do aside */
+}
+
+.imagem_van_gogh img {
+    width: 100%;        /* imagem ocupa toda a largura do aside */
+    border-radius: 4px; /* bordas arredondadas na imagem */
+    display: block;     /* remove o espaço extra embaixo da imagem */
+}
+
+.imagem_van_gogh .Infos {
+    margin-top: 15px;           /* espaço acima das informações */
+    text-align: left;           /* alinha o texto à esquerda */
+    font-size: 0.9rem;          /* tamanho da fonte das informações */
+    line-height: 1.8;           /* espaçamento entre linhas */
+    border-top: 1px solid #bbb; /* linha divisória acima das informações */
+    padding-top: 10px;          /* espaço entre a linha e o texto */
+}
+
+.imagem_van_gogh .Infos p {
+    margin-bottom: 6px; /* espaço entre cada linha de informação */
+}
+
+/* ===========================
+   SEÇÃO PRINCIPAL (texto)
+=========================== */
+.principal {
+    grid-column: 2;     /* posiciona a seção na segunda coluna do grid */
+    grid-row: 1;        /* posiciona na primeira linha do grid */
+    text-align: justify; /* justifica o texto nas duas margens */
+    padding: 0 10px;    /* espaçamento interno nas laterais */
+}
+
+.principal h1 {
+    font-size: 1.8rem;          /* tamanho do título da seção */
+    color: #506e6a;             /* cor verde do título */
+    margin-bottom: 16px;        /* espaço abaixo do título */
+    border-bottom: 2px solid #506e6a; /* linha decorativa abaixo do título */
+    padding-bottom: 8px;        /* espaço entre o texto e a linha */
+}
+
+.principal p {
+    font-size: 1rem;    /* tamanho do texto principal */
+    color: #3a3a3a;     /* cor cinza escuro do texto */
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background-color: #506e6a; /* cor de fundo verde do rodapé */
+    color: white;              /* cor do texto em branco */
+    text-align: center;        /* centraliza o texto */
+    padding: 10px 0;           /* espaçamento interno vertical */
+    margin-top: 40px;          /* espaço acima do rodapé */
+}
+
+footer p {
+    font-size: 0.8rem;  /* tamanho pequeno do texto do rodapé */
+    font-weight: normal; /* peso normal da fonte */
+    line-height: 1.8;   /* espaçamento entre linhas */
+    opacity: 0.9;       /* leve transparência no texto */
+}
+
+/* ===========================
+   RESPONSIVO (telas pequenas)
+=========================== */
+@media only screen and (max-width: 767px) {
+
+    div.wrapper {
+        grid-template-columns: 1fr; /* muda para 1 coluna: tudo empilhado verticalmente */
+    }
+
+    .imagem_van_gogh {
+        grid-column: 1;     /* aside ocupa a única coluna */
+        grid-row: 1;        /* aside vai para a primeira linha */
+        position: static;   /* remove o sticky — não faz sentido em mobile */
+    }
+
+    .principal {
+        grid-column: 1;     /* seção principal ocupa a única coluna */
+        grid-row: 2;        /* seção principal vai para a segunda linha */
+    }
+
+    .img {
+        width: calc(50% - 10px); /* cada card ocupa metade da tela (2 por linha) */
+    }
+}
