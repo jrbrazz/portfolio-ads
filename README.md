@@ -1,6 +1,6 @@
 # Portfólio de Análise e Desenvolvimento de Sistemas
 
-Olá! Eu sou a **jrbrazz** 👋
+Olá! Eu sou a **Jamilly** 👋
 
 Sou estudante de ADS, apaixonada por tecnologia e em busca da minha primeira oportunidade no mercado de TI como Desenvolvedora Back-End ou Front-End / Estagiária.
 
